@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_school_root"
+              name="SMS"
+              web_icon="om_school,static/description/school.png"
+              sequence="35"
+    />
+    <menuitem id="menu_students"
+              name="students"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_parents"
+              name="Parents"
+              parent="menu_school_root"
+              action="action_school_parent"
+    />
+    <menuitem id="menu_hr"
+              name="HR"
+              parent="menu_school_root"
+    />
+    <menuitem id="menu_employees"
+              name="Employees"
+              parent="menu_hr"
+              action="hr.open_view_employee_list_my"
+    />
+    <menuitem id="menu_departments"
+              name="Department"
+              parent="menu_hr"
+              action="hr.hr_department_kanban_action"
+    />
+    <menuitem id="menu_skill"
+              name="Skills"
+              parent="menu_hr"
+              action="hr_skills.hr_employee_skill_report_action"
+    />
+    <menuitem id="menu_skill_types"
+              name="Skill types"
+              parent="menu_hr"
+              action="hr_skills.hr_skill_type_action"
+    />
+    <menuitem id="menu_employee_tags"
+              name="Tags"
+              parent="menu_hr"
+              action="hr.open_view_categ_form"
+    />
+    <menuitem id="job_position"
+              name="Job Position"
+              parent="menu_hr"
+              action="hr.action_hr_job"
+    />
+    <menuitem id="employment_type"
+              name="Employment Type"
+              parent="menu_hr"
+              action="hr.hr_contract_type_action"
+    />
+    <menuitem id="menu_finance"
+              name="Finance"
+              parent="menu_school_root"
+    />
+    <menuitem id="menu_invoice"
+              name="Invoice"
+              parent="menu_finance"
+              action="account.action_move_out_invoice_type"
+    />
+    <menuitem id="menu_payment"
+              name="Payment"
+              parent="menu_finance"
+              action="account.action_account_payments"
+    />
+    />
+    <menuitem id="menu_subject"
+              name="Subjects"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_activities"
+              name="Activities"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+
+    <menuitem id="menu_attendance"
+              name="Attendance"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_academics"
+              name="Academics"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_communications"
+              name="Communications"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+    <menuitem id="menu_meeting"
+              name="Meetings"
+              parent="menu_communications"
+              action="action_school_student"
+    />
+    <menuitem id="menu_configurations"
+              name="Configurations"
+              parent="menu_school_root"
+              action="action_school_student"
+    />
+</odoo>

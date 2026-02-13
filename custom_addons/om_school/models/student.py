@@ -1,0 +1,33 @@
+from odoo import api, fields, models
+
+class SchoolStudent(models.Model):
+    _name = 'school.student'
+    _inherit = ['mail.thread']
+    _description = 'Student Master'
+    _rec_name = 'student_name'
+
+    student_name = fields.Char(string="Name",required=True,tracking=True)
+    date_of_birth = fields.Date(string="DOB",tracking=True)
+    gender = fields.Selection([('male','Male'),('female','Female')],string="Gender",tracking=True)
+    # guardian = fields.Many2one('school.guardian',String="Guardian")
+    # reference = fields.Char(string='Reference', default='New')
+    # class_id = fields.Many2one('school.level')
+    # # tag_ids = fields.Many2many(
+    # #     'student.tag','student_teg_rel','student_id','tag_id',string="Tags")               #defining the table column manual but the below line lets odoo do it automatically
+    # tag_ids = fields.Many2many('student.tag', string="Tags")
+    # subject = fields.Many2many('school.subject', string="Subjects Undertaken")
+    is_disabled = fields.Boolean(string='Disabled',tracking=True)
+    description = fields.Char(string="Disability Description")
+    student_parent = fields.Many2one('school.parent',string="Parent")
+    #
+    # @api.model_create_multi
+    # def create(self, vals_list):
+    #     for vals in vals_list:
+    #         if not vals.get('reference') or vals['reference'] == 'New':
+    #             vals['reference'] = self.env['ir.sequence'].next_by_code('school.student')
+    #         return super().create(vals_list)
+    #
+    # def unlink(self):
+    #     # can perform anything here
+    #     print("Supper method is executed")
+    #     return super().unlink()
