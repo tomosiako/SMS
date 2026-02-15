@@ -14,6 +14,8 @@
         "views/student_view.xml",
         "views/parent_view.xml",
         "views/account_move_views.xml",
+        "views/activity_view.xml",
+        "views/subject_view.xml",
         "views/menu.xml"
     ]
 }
